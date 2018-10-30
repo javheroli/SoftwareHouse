@@ -1,0 +1,244 @@
+
+ 
+ 
+table.displayStyle {
+	border: 1px solid #666;
+	width: 80%;
+	margin: 20px 0 20px 0 !important;
+}
+
+table.displayStyle th, table.displayStyle td {
+	padding: 2px 4px 2px 4px !important;
+	text-align: left;
+	vertical-align: top;
+}
+
+table.displayStyle th {
+	text-align: center;
+	background-color: #b268d7;
+}
+
+
+table.displayStyle tr:nth-child(odd) {
+	background-color:  #ffffb3;
+}
+
+table.displayStyle tr:nth-child(even) {
+	background-color: #e0c2ef
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button.special {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+button.special:hover{
+  opacity: 0.7;
+}
+
+.forumPost {
+	float:left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  border:2px solid;
+}
+
+
+.forumPost img.admin {
+    max-width: 100px;
+    width: 100%;
+    border-radius: 50%;
+    border:7px solid black
+}
+
+.forumPost img.apprentice {
+    max-width: 100px;
+    width: 100%;
+    border-radius: 50%;
+    border:7px solid blue
+}
+
+.forumPost img.expert {
+    max-width: 100px;
+    width: 100%;
+    border-radius: 50%;
+    border:7px solid orange
+}
+
+.forumPost img.investor {
+    max-width: 100px;
+    width: 100%;
+    border-radius: 50%;
+    border:7px solid green
+}
+
+.forumPost img.manager {
+    max-width: 100px;
+    width: 100%;
+    border-radius: 50%;
+    border:7px solid red
+}
+
+.forumPost img.anonymous {
+    max-width: 100px;
+    width: 100%;
+    border-radius: 50%;
+    border:7px solid grey
+}
+
+.forumPost p.admin {
+	color:black;
+}
+
+.forumPost p.apprentice {
+    color:blue;
+}
+
+.forumPost p.expert {
+  color:orange;
+}
+
+.forumPost p.investor {
+    color:green;
+}
+
+.forumPost p.manager {
+    color:red;
+}
+
+.alertSuccess {
+    padding: 20px;
+    background-color: green;
+    color: white;
+}
+
+.alertFail {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+
+a.specialLink:link {
+    color: purple;
+    font-size:25px;
+     text-decoration: none;
+}
+
+
+a.specialLink:visited {
+    color: purple;
+     text-decoration: none;
+}
+
+a.specialLink:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+a.specialLink:active {
+    color: hotpink;
+    text-decoration: underline;
+}
+
+a.previous {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a.previous:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+
+table.displayStyle .redCell {
+	text-align: center;
+	background-color: #ff4d4d;
+	
+}
+
+span.tooltip {outline:none; }
+span.tooltip strong {line-height:30px;}
+span.tooltip:hover {text-decoration:none;} 
+span.tooltip span {
+    z-index:10;display:none; padding:14px 20px;
+    margin-top:60px; margin-left:-160px;
+    width:300px; line-height:16px;
+}
+span.tooltip:hover span{
+    display:inline; position:absolute; 
+    border:2px solid #FFF;  color:#EEE;
+    background:#333 url(cssttp/css-tooltip-gradient-bg.png) repeat-x 0 0;
+}
+.callout {z-index:20;position:absolute;border:0;top:-14px;left:120px;}
+    
+
+a.tooltip span
+{
+    border-radius:2px;        
+    box-shadow: 0px 0px 8px 4px #666;
+}
+
+.actionButton {
+    display: inline-block;
+    background: #e0c2ef;
+    border-radius: 4px;
+    font-family: "arial-black";
+    font-size: 14px;
+    color: #000;
+    padding: 8px 12px;
+    cursor: pointer;
+    
+}
+
+.actionButton:hover {
+    background: #ffffb3;
+
+}
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ * converters.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd		
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd		
+	">
+
+	<util:list id="converters">
+		<bean class="converters.ActorToStringConverter" />
+		<bean class="converters.StringToActorConverter" />
+		
+		<bean class="converters.AdministratorToStringConverter" />
+		<bean class="converters.StringToAdministratorConverter" />
+		
+		<bean class="converters.AnswerToStringConverter" />
+		<bean class="converters.StringToAnswerConverter" />
+		
+		<bean class="converters.ApplicationToStringConverter" />
+		<bean class="converters.StringToApplicationConverter" />
+		
+		<bean class="converters.ApprenticeToStringConverter" />
+		<bean class="converters.StringToApprenticeConverter" />
+		
+		<bean class="converters.ContestToStringConverter" />
+		<bean class="converters.StringToContestConverter" />
+		
+		<bean class="converters.CreditCardToStringConverter" />
+		<bean class="converters.StringToCreditCardConverter" />
+		
+		<bean class="converters.DisciplineToStringConverter" />
+		<bean class="converters.StringToDisciplineConverter" />
+		
+		<bean class="converters.ExpertToStringConverter" />
+		<bean class="converters.StringToExpertConverter" />
+		
+		<bean class="converters.ForumToStringConverter" />
+		<bean class="converters.StringToForumConverter" />
+		
+		<bean class="converters.InvestmentToStringConverter" />
+		<bean class="converters.StringToInvestmentConverter" />
+		
+		<bean class="converters.InvestorToStringConverter" />
+		<bean class="converters.StringToInvestorConverter" />
+		
+		<bean class="converters.ManagerToStringConverter" />
+		<bean class="converters.StringToManagerConverter" />
+		
+		<bean class="converters.PostToStringConverter" />
+		<bean class="converters.StringToPostConverter" />
+		
+		<bean class="converters.ProblemToStringConverter" />
+		<bean class="converters.StringToProblemConverter" />
+		
+		<bean class="converters.ResearchToStringConverter" />
+		<bean class="converters.StringToResearchConverter" />
+		
+		<bean class="converters.SolutionToStringConverter" />
+		<bean class="converters.StringToSolutionConverter" />
+		
+		<bean class="converters.ThreadToStringConverter" />
+		<bean class="converters.StringToThreadConverter" />
+		
+		<bean class="converters.UserAccountToStringConverter" />
+		<bean class="converters.StringToUserAccountConverter" />
+	</util:list>
+	
+</beans>

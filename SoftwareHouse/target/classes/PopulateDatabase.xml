@@ -1,0 +1,2857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- * PopulateDatabase.xml * * Copyright (C) 2017 Universidad de Sevilla 
+	* * The use of this project is hereby constrained to the conditions of the 
+	* TDG Licence, a copy of which you may download from * http://www.tdg-seville.info/License.html -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	">
+
+	<!-- User accounts -->
+
+	<bean id="userAccount1" class="security.UserAccount">
+		<property name="username" value="admin" />
+		<property name="password" value="21232f297a57a5a743894a0e4a801fc3" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMIN" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount2" class="security.UserAccount">
+		<property name="username" value="apprentice1" />
+		<property name="password" value="5009a3df8ff30a4d01c1d36b75bbdd3e" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="APPRENTICE" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount3" class="security.UserAccount">
+		<property name="username" value="apprentice2" />
+		<property name="password" value="0f708b1c89b256e4981cad0a90a3dbf3" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="APPRENTICE" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount4" class="security.UserAccount">
+		<property name="username" value="apprentice3" />
+		<property name="password" value="a1fba0d7679865783d7402afdeae4f50" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="APPRENTICE" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount5" class="security.UserAccount">
+		<property name="username" value="apprentice4" />
+		<property name="password" value="19a5fcc2c4f5bafa1f7f630b5a0129d5" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="APPRENTICE" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount6" class="security.UserAccount">
+		<property name="username" value="apprentice5" />
+		<property name="password" value="ed499dcf8f72df6cdefd6c32fdc5498a" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="APPRENTICE" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount7" class="security.UserAccount">
+		<property name="username" value="manager1" />
+		<property name="password" value="c240642ddef994358c96da82c0361a58" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="MANAGER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount8" class="security.UserAccount">
+		<property name="username" value="manager2" />
+		<property name="password" value="8df5127cd164b5bc2d2b78410a7eea0c" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="MANAGER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount9" class="security.UserAccount">
+		<property name="username" value="manager3" />
+		<property name="password" value="2d3a5db4a2a9717b43698520a8de57d0" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="MANAGER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount10" class="security.UserAccount">
+		<property name="username" value="expert1" />
+		<property name="password" value="136ec678bb71fd8a732b445b76451c45" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="EXPERT" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount11" class="security.UserAccount">
+		<property name="username" value="expert2" />
+		<property name="password" value="b311cf25c64d6a363377e81bcbdd4148" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="EXPERT" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount12" class="security.UserAccount">
+		<property name="username" value="expert3" />
+		<property name="password" value="9be8837621dc8a83b607658bcbc9ae3e" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="EXPERT" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount13" class="security.UserAccount">
+		<property name="username" value="expert4" />
+		<property name="password" value="cf2aa988506b7ce5024e75a98dcffd1e" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="EXPERT" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount14" class="security.UserAccount">
+		<property name="username" value="expert5" />
+		<property name="password" value="b332a67d37064ca95e28b626e23fa6eb" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="EXPERT" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount15" class="security.UserAccount">
+		<property name="username" value="expert6" />
+		<property name="password" value="ac432f2a8b3e41ed76899e05c54ac8ee" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="EXPERT" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount16" class="security.UserAccount">
+		<property name="username" value="investor1" />
+		<property name="password" value="23152e35710ddbb79ccdc7b36502e849" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="INVESTOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount17" class="security.UserAccount">
+		<property name="username" value="investor2" />
+		<property name="password" value="aad4a13e9dd1348158da63ce62982140" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="INVESTOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount18" class="security.UserAccount">
+		<property name="username" value="investor3" />
+		<property name="password" value="ffd0fff96eef59f261298fd88e874424" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="INVESTOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+
+
+
+	<!-- Administrator -->
+	<bean id="administrator" class="domain.Administrator">
+		<property name="name" value="Ángeles" />
+		<property name="surname" value="Hidalgo Perea " />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone">
+			<null />
+		</property>
+		<property name="email" value="angeles@gmail.es" />
+		<property name="linkPhoto" value="https://static.nova.bg/public/pics/anysize/1473611687.png"/>
+		<property name="userAccount" ref="userAccount1" />
+		<property name="threads">
+			<list>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- Apprentices -->
+	<bean id="apprentice1" class="domain.Apprentice">
+		<property name="name" value="Francisco" />
+		<property name="surname" value="Rivero Rodríguez" />
+		<property name="postalAddress" value="Sevilla, C/ Guadalimar 9" />
+		<property name="phone">
+			<null />
+		</property>
+		<property name="email" value="francisco@gmail.es" />
+		<property name="linkPhoto" value="https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/n/nol/large/19080.png"/>
+		<property name="points" value="65" />
+		<property name="userAccount" ref="userAccount2" />
+		<property name="threads">
+			<list>
+			<ref bean="thread8"/>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			<ref bean="post1"/>
+			<ref bean="post5"/>
+			<ref bean="post13"/>
+			<ref bean="post29"/>
+			<ref bean="post31"/>
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				<ref bean="application1" />
+				<ref bean="application7" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="apprentice2" class="domain.Apprentice">
+		<property name="name" value="Antonio" />
+		<property name="surname" value="Sáez Romero" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone" value="941623956" />
+		<property name="email" value="francisco@gmail.es" />
+		<property name="linkPhoto" value="https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/e/esc/large/19617.png"/>
+		<property name="points" value="40" />
+		<property name="userAccount" ref="userAccount3" />
+		<property name="threads">
+			<list>
+			<ref bean="thread5"/>
+			<ref bean="thread6"/>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			<ref bean="post2"/>
+			<ref bean="post6"/>
+			<ref bean="post8"/>
+			<ref bean="post15"/>
+			<ref bean="post17"/>
+			<ref bean="post20"/>
+			<ref bean="post33"/>
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				<ref bean="application2" />
+				<ref bean="application5" />
+				<ref bean="application10" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="apprentice3" class="domain.Apprentice">
+		<property name="name" value="José Ángel" />
+		<property name="surname" value="Garrido Cordero" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone" value="643900511" />
+		<property name="email" value="joseangel@gmail.es" />
+		<property name="linkPhoto" value="https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/f/fra/large/19892.png"/>
+		<property name="points" value="15" />
+		<property name="userAccount" ref="userAccount4" />
+		<property name="threads">
+			<list>
+			<ref bean="thread3"/>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			<ref bean="post3"/>
+			<ref bean="post7"/>
+			<ref bean="post9"/>
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				<ref bean="application3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="apprentice4" class="domain.Apprentice">
+		<property name="name" value="Oliva" />
+		<property name="surname" value="Rodríguez Gutiérrez" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone" value="945122729" />
+		<property name="email" value="oliva@gmail.es" />
+		<property name="linkPhoto" value="https://static.nova.bg/public/pics/anysize/1473609279.png"/>
+		<property name="points" value="40" />
+		<property name="userAccount" ref="userAccount5" />
+		<property name="threads">
+			<list>
+			<ref bean="thread1"/>
+			<ref bean="thread7"/>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			<ref bean="post4"/>
+			<ref bean="post19"/>
+			<ref bean="post21"/>
+			<ref bean="post24"/>
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				<ref bean="application4" />
+				<ref bean="application9" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="apprentice5" class="domain.Apprentice">
+		<property name="name" value="Eduardo" />
+		<property name="surname" value="Ferrer Albelda" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone" value="934122622" />
+		<property name="email" value="edu7@gmail.es" />
+		<property name="linkPhoto" value="https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/i/ill/large/19124.png"/>
+		<property name="points" value="20" />
+		<property name="userAccount" ref="userAccount6" />
+		<property name="threads">
+			<list>
+			<ref bean="thread2"/>
+			<ref bean="thread4"/>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			<ref bean="post12"/>
+			<ref bean="post26"/>
+			<ref bean="post28"/>
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				<ref bean="application6" />
+				<ref bean="application8" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Manager -->
+
+	<bean id="manager1" class="domain.Manager">
+		<property name="name" value="Pilar" />
+		<property name="surname" value="León Alonso" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone" value="912333510" />
+		<property name="email" value="pilar@gmail.es" />
+		<property name="linkPhoto" value="http://video.novatv.bg/novatv/public/pics/anysize/1439584671.png"/>
+		<property name="userAccount" ref="userAccount7" />
+		<property name="threads">
+			<list>
+			<ref bean="thread9" />
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			<ref bean="post32"/>
+			<ref bean="post34"/>
+			</list>
+		</property>
+		<property name="contests">
+			<list>
+				<ref bean="contest1" />
+				<ref bean="contest3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="manager2" class="domain.Manager">
+		<property name="name" value="Mercedes" />
+		<property name="surname" value="Oria Segura" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone">
+			<null />
+		</property>
+		<property name="email" value="mercedes@gmail.es" />
+		<property name="linkPhoto" value="http://free-webcambg.com/working/Big-Brother-2016-BG/images/vip/part-Irina-Tencheva-Hristova.png"/>
+		<property name="userAccount" ref="userAccount8" />
+		<property name="threads">
+			<list>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			</list>
+		</property>
+		<property name="contests">
+			<list>
+				<ref bean="contest2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="manager3" class="domain.Manager">
+		<property name="name" value="Ana" />
+		<property name="surname" value="Cabanillas Mora" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone">
+			<null />
+		</property>
+		<property name="email" value="escardiel@gmail.es" />
+		<property name="linkPhoto" value="http://video.novatv.bg/novatv/public/pics/anysize/1439585426.png"/>
+		<property name="userAccount" ref="userAccount9" />
+		<property name="threads">
+			<list>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			</list>
+		</property>
+		<property name="contests">
+			<list>
+				<ref bean="contest4" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="expert1" class="domain.Expert">
+		<property name="name" value="Adrián" />
+		<property name="surname" value="López Postigo" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone">
+			<null />
+		</property>
+		<property name="email" value="adrian7@gmail.es" />
+		<property name="linkPhoto" value="https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/d/dav/large/24307.png"/>
+		<property name="userAccount" ref="userAccount10" />
+		<property name="threads">
+			<list>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			</list>
+		</property>
+		<property name="disciplines">
+			<list>
+				<ref bean="discipline6" />
+				<ref bean="discipline10" />
+				<ref bean="discipline11" />
+				<ref bean="discipline15" />
+			</list>
+		</property>
+		<property name="contestsForEdition">
+			<list>
+				<ref bean="contest1" />
+				<ref bean="contest4" />
+			</list>
+		</property>
+		<property name="contestsForEvaluation">
+			<list>
+				<ref bean="contest1" />
+				<ref bean="contest2" />
+			</list>
+		</property>
+		<property name="researches">
+			<list>
+				<ref bean="research2" />
+				<ref bean="research3" />
+				<ref bean="research4" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="expert2" class="domain.Expert">
+		<property name="name" value="Víctor" />
+		<property name="surname" value="Hurtado Pérez" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone">
+			<null />
+		</property>
+		<property name="email" value="victor@gmail.es" />
+		<property name="linkPhoto" value="https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/w/wil/large/24667.png"/>
+		<property name="userAccount" ref="userAccount11" />
+		<property name="threads">
+			<list>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			<ref bean="post10"/>
+			<ref bean="post27"/>
+			</list>
+		</property>
+		<property name="disciplines">
+			<list>
+				<ref bean="discipline1" />
+				<ref bean="discipline3" />
+				<ref bean="discipline4" />
+				<ref bean="discipline7" />
+				<ref bean="discipline8" />
+				<ref bean="discipline12" />
+				<ref bean="discipline15" />
+				<ref bean="discipline16" />
+			</list>
+		</property>
+		<property name="contestsForEdition">
+			<list>
+				<ref bean="contest3" />
+			</list>
+		</property>
+		<property name="contestsForEvaluation">
+			<list>
+				<ref bean="contest3" />
+				<ref bean="contest4" />
+			</list>
+		</property>
+		<property name="researches">
+			<list>
+				<ref bean="research1" />
+				<ref bean="research4" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="expert3" class="domain.Expert">
+		<property name="name" value="Manuel" />
+		<property name="surname" value="Pellicer Catalán" />
+		<property name="postalAddress" value="C/ Castillo de Alcalá de Guadaíra 9, 3A" />
+		<property name="phone" value="812614943" />
+		<property name="email" value="manuel@gmail.es" />
+		<property name="linkPhoto" value="https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/a/agi/large/15255.png"/>
+		<property name="userAccount" ref="userAccount12" />
+		<property name="threads">
+			<list>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			<ref bean="post11"/>
+			</list>
+		</property>
+		<property name="disciplines">
+			<list>
+				<ref bean="discipline2" />
+				<ref bean="discipline5" />
+				<ref bean="discipline9" />
+				<ref bean="discipline10" />
+				<ref bean="discipline11" />
+				<ref bean="discipline13" />
+				<ref bean="discipline14" />
+			</list>
+		</property>
+		<property name="contestsForEdition">
+			<list>
+			</list>
+		</property>
+		<property name="contestsForEvaluation">
+			<list>
+				<ref bean="contest1" />
+				<ref bean="contest2" />
+			</list>
+		</property>
+		<property name="researches">
+			<list>
+				<ref bean="research2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="expert4" class="domain.Expert">
+		<property name="name" value="Leonardo" />
+		<property name="surname" value="García Sanjuán" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone" value="943136843" />
+		<property name="email" value="leonardo@gmail.es" />
+		<property name="linkPhoto" value="https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/r/rul/large/25626.png"/>
+		<property name="userAccount" ref="userAccount13" />
+		<property name="threads">
+			<list>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			<ref bean="post30"/>
+			</list>
+		</property>
+		<property name="disciplines">
+			<list>
+				<ref bean="discipline1" />
+				<ref bean="discipline6" />
+				<ref bean="discipline9" />
+				<ref bean="discipline13" />
+				<ref bean="discipline14" />
+			</list>
+		</property>
+		<property name="contestsForEdition">
+			<list>
+			</list>
+		</property>
+		<property name="contestsForEvaluation">
+			<list>
+			</list>
+		</property>
+		<property name="researches">
+			<list>
+				<ref bean="research1" />
+				<ref bean="research2" />
+				<ref bean="research3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="expert5" class="domain.Expert">
+		<property name="name" value="Beatriz" />
+		<property name="surname" value="Campuzano Díaz" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone" value="610317117" />
+		<property name="email" value="beatriz5@gmail.es" />
+		<property name="linkPhoto" value="http://video.novatv.bg/novatv/public/pics/anysize/1439585574.png"/>
+		<property name="userAccount" ref="userAccount14" />
+		<property name="threads">
+			<list>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			<ref bean="post18"/>
+			</list>
+		</property>
+		<property name="disciplines">
+			<list>
+				<ref bean="discipline1" />
+				<ref bean="discipline4" />
+				<ref bean="discipline5" />
+				<ref bean="discipline10" />
+				<ref bean="discipline11" />
+				<ref bean="discipline15" />
+				<ref bean="discipline16" />
+			</list>
+		</property>
+		<property name="contestsForEdition">
+			<list>
+				<ref bean="contest2" />
+			</list>
+		</property>
+		<property name="contestsForEvaluation">
+			<list>
+				<ref bean="contest1" />
+				<ref bean="contest3" />
+				<ref bean="contest4" />
+			</list>
+		</property>
+		<property name="researches">
+			<list>
+				<ref bean="research2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="expert6" class="domain.Expert">
+		<property name="name" value="Pablo Antonio" />
+		<property name="surname" value="Fernández Sánchez" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone" value="912303445" />
+		<property name="email" value="pabloFS@gmail.es" />
+		<property name="linkPhoto" value="https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/b/bal/large/17294.png"/>
+		<property name="userAccount" ref="userAccount15" />
+		<property name="threads">
+			<list>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			<ref bean="post14"/>
+			<ref bean="post16"/>
+			<ref bean="post22"/>
+			<ref bean="post23"/>
+			<ref bean="post25"/>
+			</list>
+		</property>
+		<property name="disciplines">
+			<list>
+				<ref bean="discipline1" />
+				<ref bean="discipline8" />
+				<ref bean="discipline12" />
+				<ref bean="discipline15" />
+			</list>
+		</property>
+		<property name="contestsForEdition">
+			<list>
+			</list>
+		</property>
+		<property name="contestsForEvaluation">
+			<list>
+				<ref bean="contest4" />
+			</list>
+		</property>
+		<property name="researches">
+			<list>
+				<ref bean="research1" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="investor1" class="domain.Investor">
+		<property name="name" value="Mario de Jesús" />
+		<property name="surname" value="Pérez Jiménez" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone" value="844129043" />
+		<property name="email" value="mario88FS@gmail.es" />
+		<property name="linkPhoto" value="https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/s/sol/large/19134.png"/>
+		<property name="userAccount" ref="userAccount16" />
+		<property name="threads">
+			<list>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			</list>
+		</property>
+		<property name="investments">
+			<list>
+				<ref bean="investment1" />
+				<ref bean="investment3" />
+				<ref bean="investment7" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="investor2" class="domain.Investor">
+		<property name="name" value="Miguel Angel" />
+		<property name="surname" value="Gutiérrez Naranjo" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone">
+			<null />
+		</property>
+		<property name="email" value="miguel7@gmail.es" />
+		<property name="linkPhoto" value="https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/l/lek/large/30771.png"/>
+		<property name="userAccount" ref="userAccount17" />
+		<property name="threads">
+			<list>
+			<ref bean="thread10"/>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			</list>
+		</property>
+		<property name="investments">
+			<list>
+				<ref bean="investment4" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="investor3" class="domain.Investor">
+		<property name="name" value="María José" />
+		<property name="surname" value="Hidalgo Doblado" />
+		<property name="postalAddress">
+			<null />
+		</property>
+		<property name="phone">
+			<null />
+		</property>
+		<property name="email" value="mjhd0@gmail.es" />
+		<property name="linkPhoto" value="https://static.nova.bg/public/pics/anysize/1473613024.png"/>
+		<property name="userAccount" ref="userAccount18" />
+		<property name="threads">
+			<list>
+			</list>
+		</property>
+		<property name="posts">
+			<list>
+			</list>
+		</property>
+		<property name="investments">
+			<list>
+				<ref bean="investment2" />
+				<ref bean="investment5" />
+				<ref bean="investment6" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Problems -->
+	<bean id="problem1" class="domain.Problem">
+		<property name="number" value="1" />
+		<property name="statement" value="This is problem 1" />
+		<property name="linkPicture"
+			value="https://www.e-reading.club/illustrations/1010/1010507-_4.jpg" />
+		<property name="mark" value="2.5" />
+		<property name="contest" ref="contest1" />
+	</bean>
+
+
+	<bean id="problem2" class="domain.Problem">
+		<property name="number" value="2" />
+		<property name="statement" value="This is problem 2" />
+		<property name="linkPicture"
+			value="http://media.indiedb.com/images/articles/1/187/186772/work1.png" />
+		<property name="mark" value="2.5" />
+		<property name="contest" ref="contest1" />
+	</bean>
+
+	<bean id="problem3" class="domain.Problem">
+		<property name="number" value="3" />
+		<property name="statement" value="This is problem 3" />
+		<property name="linkPicture"
+			value="http://boredomtherapy.com/wp-content/uploads/2017/04/logic-puzzles-1.png" />
+		<property name="mark" value="5" />
+		<property name="contest" ref="contest1" />
+	</bean>
+
+	<bean id="problem4" class="domain.Problem">
+		<property name="number" value="1" />
+		<property name="statement" value="This is problem 1" />
+		<property name="linkPicture">
+			<null />
+		</property>
+		<property name="mark" value="7.5" />
+		<property name="contest" ref="contest2" />
+	</bean>
+
+	<bean id="problem5" class="domain.Problem">
+		<property name="number" value="2" />
+		<property name="statement" value="This is problem 2" />
+		<property name="linkPicture"
+			value="https://i2.wp.com/headsup.boyslife.org/files/2016/05/p6ytm2ocql7odpgondow.gif" />
+		<property name="mark" value="2.5" />
+		<property name="contest" ref="contest2" />
+	</bean>
+
+	<bean id="problem6" class="domain.Problem">
+		<property name="number" value="1" />
+		<property name="statement" value="This is problem 1" />
+		<property name="linkPicture">
+			<null />
+		</property>
+		<property name="mark" value="2" />
+		<property name="contest" ref="contest3" />
+	</bean>
+
+	<bean id="problem7" class="domain.Problem">
+		<property name="number" value="2" />
+		<property name="statement" value="This is problem 2" />
+		<property name="linkPicture">
+			<null />
+		</property>
+		<property name="mark" value="2" />
+		<property name="contest" ref="contest3" />
+	</bean>
+
+	<bean id="problem8" class="domain.Problem">
+		<property name="number" value="3" />
+		<property name="statement" value="This is problem 3" />
+		<property name="linkPicture">
+			<null />
+		</property>
+		<property name="mark" value="2" />
+		<property name="contest" ref="contest3" />
+	</bean>
+
+	<bean id="problem9" class="domain.Problem">
+		<property name="number" value="4" />
+		<property name="statement" value="This is problem 4" />
+		<property name="linkPicture">
+			<null />
+		</property>
+		<property name="mark" value="4" />
+		<property name="contest" ref="contest3" />
+	</bean>
+
+	<bean id="problem10" class="domain.Problem">
+		<property name="number" value="1" />
+		<property name="statement" value="This is problem 1" />
+		<property name="linkPicture">
+			<null />
+		</property>
+		<property name="mark" value="5" />
+		<property name="contest" ref="contest4" />
+	</bean>
+
+	<!-- Credit cards -->
+
+	<bean class="domain.CreditCard" id="creditCard1">
+		<property name="holderName" value="Juan Arias Pérez" />
+		<property name="brandName" value="MasterCard" />
+		<property name="number" value="370821082394306" />
+		<property name="expirationMonth" value="7" />
+		<property name="expirationYear" value="19" />
+		<property name="CVV" value="701" />
+	</bean>
+
+	<bean class="domain.CreditCard" id="creditCard2">
+		<property name="holderName" value="Iván" />
+		<property name="brandName" value="MasterCard" />
+		<property name="number" value="343090425255004" />
+		<property name="expirationMonth" value="8" />
+		<property name="expirationYear" value="19" />
+		<property name="CVV" value="761" />
+	</bean>
+
+	<bean class="domain.CreditCard" id="creditCard3">
+		<property name="holderName" value="Fátima" />
+		<property name="brandName" value="AmericanExpress" />
+		<property name="number" value="343731491569451" />
+		<property name="expirationMonth" value="4" />
+		<property name="expirationYear" value="21" />
+		<property name="CVV" value="712" />
+	</bean>
+
+	<bean class="domain.CreditCard" id="creditCard4">
+		<property name="holderName" value="Rafael" />
+		<property name="brandName" value="AmericanExpress" />
+		<property name="number" value="375202218580040" />
+		<property name="expirationMonth" value="6" />
+		<property name="expirationYear" value="22" />
+		<property name="CVV" value="692" />
+	</bean>
+
+	<bean class="domain.CreditCard" id="creditCard5">
+		<property name="holderName" value="Francisco" />
+		<property name="brandName" value="AmericanExpress" />
+		<property name="number" value="340897080824954" />
+		<property name="expirationMonth" value="1" />
+		<property name="expirationYear" value="20" />
+		<property name="CVV" value="113" />
+	</bean>
+
+	<bean class="domain.CreditCard" id="creditCard6">
+		<property name="holderName" value="Javier" />
+		<property name="brandName" value="AmericanExpress" />
+		<property name="number" value="377036052811469" />
+		<property name="expirationMonth" value="7" />
+		<property name="expirationYear" value="18" />
+		<property name="CVV" value="199" />
+	</bean>
+
+	<bean class="domain.CreditCard" id="creditCard7">
+		<property name="holderName" value="Raúl" />
+		<property name="brandName" value="MasterCard" />
+		<property name="number" value="5133115538023099" />
+		<property name="expirationMonth" value="6" />
+		<property name="expirationYear" value="19" />
+		<property name="CVV" value="144" />
+	</bean>
+
+	<bean class="domain.CreditCard" id="creditCard8">
+		<property name="holderName" value="Irina" />
+		<property name="brandName" value="MasterCard" />
+		<property name="number" value="5469701091420048" />
+		<property name="expirationMonth" value="12" />
+		<property name="expirationYear" value="21" />
+		<property name="CVV" value="981" />
+	</bean>
+
+	<bean class="domain.CreditCard" id="creditCardFicticia">
+		<property name="holderName" value="FICTICIA" />
+		<property name="brandName" value="FICTICIA" />
+		<property name="number" value="0000000000000000" />
+		<property name="expirationMonth" value="1" />
+		<property name="expirationYear" value="10" />
+		<property name="CVV" value="100" />
+	</bean>
+
+
+	<!-- Applications -->
+
+	<bean class="domain.Application" id="application1">
+		<property name="ticker" value="16042018-21:01-3-009-cxyt" />
+		<property name="moment" value="2018/04/16/ 21:01" />
+		<property name="status" value="ACCEPTED" />
+		<property name="motivationLetter">
+			<null />
+		</property>
+		<property name="creditCard" ref="creditCard1" />
+		<property name="applicant" ref="apprentice1" />
+		<property name="contest" ref="contest1" />
+	</bean>
+
+	<bean class="domain.Application" id="application2">
+		<property name="ticker" value="19042018-14:45-3-008-porw" />
+		<property name="moment" value="2018/04/19/ 14:45" />
+		<property name="status" value="ACCEPTED" />
+		<property name="motivationLetter">
+			<null />
+		</property>
+		<property name="creditCard" ref="creditCard2" />
+		<property name="applicant" ref="apprentice2" />
+		<property name="contest" ref="contest1" />
+	</bean>
+
+	<bean class="domain.Application" id="application3">
+		<property name="ticker" value="20042018-15:31-3-007-hjqa" />
+		<property name="moment" value="2018/04/20/ 15:31" />
+		<property name="status" value="ACCEPTED" />
+		<property name="motivationLetter" value="This is motivation letter" />
+		<property name="creditCard" ref="creditCard3" />
+		<property name="applicant" ref="apprentice3" />
+		<property name="contest" ref="contest1" />
+	</bean>
+
+	<bean class="domain.Application" id="application4">
+		<property name="ticker" value="03052018-19:25-5-001-mxwo" />
+		<property name="moment" value="2018/05/03/ 19:25" />
+		<property name="status" value="ACCEPTED" />
+		<property name="motivationLetter">
+			<null />
+		</property>
+		<property name="creditCard" ref="creditCard4" />
+		<property name="applicant" ref="apprentice4" />
+		<property name="contest" ref="contest2" />
+	</bean>
+
+	<bean class="domain.Application" id="application5">
+		<property name="ticker" value="04052018-10:38-5-001-kwps" />
+		<property name="moment" value="2018/05/04/ 10:38" />
+		<property name="status" value="REJECTED" />
+		<property name="motivationLetter">
+			<null />
+		</property>
+		<property name="creditCard" ref="creditCardFicticia" />
+		<property name="applicant" ref="apprentice2" />
+		<property name="contest" ref="contest2" />
+	</bean>
+
+	<bean class="domain.Application" id="application6">
+		<property name="ticker" value="05052018-17:39-5-000-yhql" />
+		<property name="moment" value="2018/05/05/ 17:39" />
+		<property name="status" value="ACCEPTED" />
+		<property name="motivationLetter" value="This is motivation letter" />
+		<property name="creditCard" ref="creditCard5" />
+		<property name="applicant" ref="apprentice5" />
+		<property name="contest" ref="contest2" />
+	</bean>
+
+	<bean class="domain.Application" id="application7">
+		<property name="ticker" value="04052018-23:58-2-002-jwxi" />
+		<property name="moment" value="2018/05/04/ 23:58" />
+		<property name="status" value="DUE" />
+		<property name="motivationLetter">
+			<null />
+		</property>
+		<property name="creditCard" ref="creditCardFicticia" />
+		<property name="applicant" ref="apprentice1" />
+		<property name="contest" ref="contest3" />
+	</bean>
+
+	<bean class="domain.Application" id="application8">
+		<property name="ticker" value="07052018-11:57-2-001-jwxi" />
+		<property name="moment" value="2018/05/07/ 11:57" />
+		<property name="status" value="ACCEPTED" />
+		<property name="motivationLetter">
+			<null />
+		</property>
+		<property name="creditCard" ref="creditCard5" />
+		<property name="applicant" ref="apprentice5" />
+		<property name="contest" ref="contest3" />
+	</bean>
+
+	<bean class="domain.Application" id="application9">
+		<property name="ticker" value="08052018-12:04-2-001-rolv" />
+		<property name="moment" value="2018/05/08/ 12:04" />
+		<property name="status" value="DUE" />
+		<property name="motivationLetter">
+			<null />
+		</property>
+		<property name="creditCard" ref="creditCardFicticia" />
+		<property name="applicant" ref="apprentice4" />
+		<property name="contest" ref="contest3" />
+	</bean>
+
+	<bean class="domain.Application" id="application10">
+		<property name="ticker" value="10052018-15:28-2-001-aoka" />
+		<property name="moment" value="2018/05/10/ 15:28" />
+		<property name="status" value="PENDING" />
+		<property name="motivationLetter">
+			<null />
+		</property>
+		<property name="creditCard" ref="creditCardFicticia" />
+		<property name="applicant" ref="apprentice2" />
+		<property name="contest" ref="contest3" />
+	</bean>
+
+	<!-- Answers -->
+	<bean class="domain.Answer" id="answer1">
+		<property name="number" value="1" />
+		<property name="text" value="This is answer 1." />
+		<property name="mark" value="2.5" />
+		<property name="problem" ref="problem1" />
+	</bean>
+
+	<bean class="domain.Answer" id="answer2">
+		<property name="number" value="2" />
+		<property name="text" value="This is answer 2." />
+		<property name="mark" value="1.75" />
+		<property name="problem" ref="problem2" />
+	</bean>
+
+	<bean class="domain.Answer" id="answer3">
+		<property name="number" value="3" />
+		<property name="text" value="This is answer 3." />
+		<property name="mark" value="4" />
+		<property name="problem" ref="problem3" />
+	</bean>
+
+	<bean class="domain.Answer" id="answer4">
+		<property name="number" value="1" />
+		<property name="text" value="This is answer 1." />
+		<property name="mark" value="2" />
+		<property name="problem" ref="problem1" />
+	</bean>
+
+	<bean class="domain.Answer" id="answer5">
+		<property name="number" value="2" />
+		<property name="text" value="This is answer 2." />
+		<property name="mark" value="1" />
+		<property name="problem" ref="problem2" />
+	</bean>
+
+	<bean class="domain.Answer" id="answer6">
+		<property name="number" value="3" />
+		<property name="text" value="This is answer 3." />
+		<property name="mark" value="1" />
+		<property name="problem" ref="problem3" />
+	</bean>
+
+	<bean class="domain.Answer" id="answer7">
+		<property name="number" value="1" />
+		<property name="text">
+			<null />
+		</property>
+		<property name="mark" value="0" />
+		<property name="problem" ref="problem1" />
+	</bean>
+
+	<bean class="domain.Answer" id="answer8">
+		<property name="number" value="2" />
+		<property name="text" value="This is answer 2." />
+		<property name="mark" value="1.25" />
+		<property name="problem" ref="problem2" />
+	</bean>
+
+	<bean class="domain.Answer" id="answer9">
+		<property name="number" value="3" />
+		<property name="text" value="This is answer 3." />
+		<property name="mark" value="2" />
+		<property name="problem" ref="problem3" />
+	</bean>
+
+	<bean class="domain.Answer" id="answer10">
+		<property name="number" value="1" />
+		<property name="text" value="This is answer 1." />
+		<property name="mark">
+			<null />
+		</property>
+		<property name="problem" ref="problem4" />
+	</bean>
+
+	<bean class="domain.Answer" id="answer11">
+		<property name="number" value="2" />
+		<property name="text" value="This is answer 2." />
+		<property name="mark">
+			<null />
+		</property>
+		<property name="problem" ref="problem5" />
+	</bean>
+
+
+	<!-- Solutions -->
+
+	<bean class="domain.Solution" id="solution1">
+		<property name="mark" value="8.25" />
+		<property name="application" ref="application1" />
+		<property name="answers">
+			<list>
+				<ref bean="answer1" />
+				<ref bean="answer2" />
+				<ref bean="answer3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean class="domain.Solution" id="solution2">
+		<property name="mark" value="4" />
+		<property name="application" ref="application2" />
+		<property name="answers">
+			<list>
+				<ref bean="answer4" />
+				<ref bean="answer5" />
+				<ref bean="answer6" />
+			</list>
+		</property>
+	</bean>
+
+	<bean class="domain.Solution" id="solution3">
+		<property name="mark" value="3.25" />
+		<property name="application" ref="application3" />
+		<property name="answers">
+			<list>
+				<ref bean="answer7" />
+				<ref bean="answer8" />
+				<ref bean="answer9" />
+			</list>
+		</property>
+	</bean>
+
+	<bean class="domain.Solution" id="solution4">
+		<property name="mark">
+			<null />
+		</property>
+		<property name="application" ref="application4" />
+		<property name="answers">
+			<list>
+				<ref bean="answer10" />
+				<ref bean="answer11" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Contests -->
+
+	<bean class="domain.Contest" id="contest1">
+		<property name="title" value="Contest 1" />
+		<property name="description" value="This is Contest 1" />
+		<property name="rules">
+			<list>
+				<value>Rule 1</value>
+				<value>Rule 2</value>
+				<value>Rule 3</value>
+				<value>Rule 4</value>
+			</list>
+		</property>
+		<property name="startMoment" value="2018/04/28/ 16:00" />
+		<property name="endMoment" value="2018/04/28/ 18:20" />
+		<property name="difficultyGrade" value="3" />
+		<property name="requiredPoints" value="200" />
+		<property name="isDraft" value="false" />
+		<property name="availablePlaces" value="7" />
+		<property name="price" value="50.00" />
+		<property name="prize" value="600.00" />
+		<property name="problems">
+			<list>
+				<ref bean="problem1" />
+				<ref bean="problem2" />
+				<ref bean="problem3" />
+			</list>
+		</property>
+		<property name="discipline" ref="discipline10" />
+		<property name="manager" ref="manager1" />
+		<property name="editor" ref="expert1" />
+		<property name="judges">
+			<list>
+				<ref bean="expert1" />
+				<ref bean="expert3" />
+				<ref bean="expert5" />
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				<ref bean="application1" />
+				<ref bean="application2" />
+				<ref bean="application3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean class="domain.Contest" id="contest2">
+		<property name="title" value="Contest 2" />
+		<property name="description" value="This is Contest 2" />
+		<property name="rules">
+			<list>
+				<value>Rule 1</value>
+				<value>Rule 2</value>
+				<value>Rule 3</value>
+				<value>Rule 4</value>
+				<value>Rule 5</value>
+				<value>Rule 6</value>
+			</list>
+		</property>
+		<property name="startMoment" value="2018/05/11/ 12:00" />
+		<property name="endMoment" value="2018/05/11/ 16:00" />
+		<property name="difficultyGrade" value="5" />
+		<property name="requiredPoints" value="500" />
+		<property name="isDraft" value="false" />
+		<property name="availablePlaces" value="0" />
+		<property name="price" value="80.00" />
+		<property name="prize" value="1500.00" />
+		<property name="problems">
+			<list>
+				<ref bean="problem4" />
+				<ref bean="problem5" />
+			</list>
+		</property>
+		<property name="discipline" ref="discipline11" />
+		<property name="manager" ref="manager2" />
+		<property name="editor" ref="expert5" />
+		<property name="judges">
+			<list>
+				<ref bean="expert1" />
+				<ref bean="expert3" />
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				<ref bean="application4" />
+				<ref bean="application5" />
+				<ref bean="application6" />
+			</list>
+		</property>
+	</bean>
+	
+		<bean class="domain.Contest" id="contest3">
+		<property name="title" value="Contest 3" />
+		<property name="description" value="This is Contest 3" />
+		<property name="rules">
+			<list>
+				<value>Rule 1</value>
+				<value>Rule 2</value>
+				<value>Rule 3</value>
+			</list>
+		</property>
+		<property name="startMoment" value="2018/08/01/ 17:20" />
+		<property name="endMoment" value="2018/08/01/ 18:50" />
+		<property name="difficultyGrade" value="2" />
+		<property name="requiredPoints" value="50" />
+		<property name="isDraft" value="false" />
+		<property name="availablePlaces" value="1" />
+		<property name="price" value="30.00" />
+		<property name="prize" value="750.00" />
+		<property name="problems">
+			<list>
+				<ref bean="problem6" />
+				<ref bean="problem7" />
+				<ref bean="problem8" />
+				<ref bean="problem9" />
+			</list>
+		</property>
+		<property name="discipline" ref="discipline16" />
+		<property name="manager" ref="manager1" />
+		<property name="editor" ref="expert2" />
+		<property name="judges">
+			<list>
+				<ref bean="expert2" />
+				<ref bean="expert5" />
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				<ref bean="application7" />
+				<ref bean="application8" />
+				<ref bean="application9" />
+				<ref bean="application10" />
+			</list>
+		</property>
+	</bean>
+
+		<bean class="domain.Contest" id="contest4">
+		<property name="title" value="Contest 4" />
+		<property name="description" value="This is Contest 4" />
+		<property name="rules">
+			<list>
+				<value>Rule 1</value>
+			</list>
+		</property>
+		<property name="startMoment" value="2018/08/31/ 15:00" />
+		<property name="endMoment" value="2018/08/31/ 22:00" />
+		<property name="difficultyGrade" value="5" />
+		<property name="requiredPoints" value="1000" />
+		<property name="isDraft" value="true" />
+		<property name="availablePlaces" value="10" />
+		<property name="price" value="90.00" />
+		<property name="prize" value="2000.00" />
+		<property name="problems">
+			<list>
+				<ref bean="problem10" />
+			</list>
+		</property>
+		<property name="discipline" ref="discipline15" />
+		<property name="manager" ref="manager3" />
+		<property name="editor" ref="expert1" />
+		<property name="judges">
+			<list>
+				<ref bean="expert2" />
+				<ref bean="expert5" />
+				<ref bean="expert6" />
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+<!-- Researches -->
+
+<bean class="domain.Research" id="research1">
+		<property name="title" value="Research 1" />
+		<property name="subject" value="Arquitectura para la eficiencia energética y sostenibilidad en entornos residenciales" />
+		<property name="description" value="This is Research 1" />
+		<property name="projectWebpage" value="https://investigacion.us.es/sisius/sis_proyecto.php?idproy=16037" />
+		<property name="startDate" value="2018/03/27/" />
+		<property name="endDate" value="2018/05/04/" />
+		<property name="minCost" value="1200.00" />
+		<property name="isCancelled" value="false" />
+		<property name="budget" value="6500.00" />
+		<property name="team">
+			<list>
+				<ref bean="expert2" />
+				<ref bean="expert4" />
+				<ref bean="expert6" />
+			</list>
+		</property>
+		<property name="investments">
+			<list>
+				<ref bean="investment1" />
+				<ref bean="investment2" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean class="domain.Research" id="research2">
+		<property name="title" value="Research 2" />
+		<property name="subject" value="Healthy and Efficient Routes in Massive Open-Data Based Smart Cities-Citizen" />
+		<property name="description" value="This is Research 2" />
+		<property name="projectWebpage" value="https://investigacion.us.es/sisius/sis_proyecto.php?idproy=24407" />
+		<property name="startDate" value="2018/04/13/" />
+		<property name="endDate"><null/></property>
+		<property name="minCost" value="3000.00" />
+		<property name="isCancelled" value="false" />
+		<property name="budget" value="18000.00" />
+		<property name="team">
+			<list>
+				<ref bean="expert1" />
+				<ref bean="expert3" />
+				<ref bean="expert4" />
+			</list>
+		</property>
+		<property name="investments">
+			<list>
+				<ref bean="investment3" />
+				<ref bean="investment4" />
+				<ref bean="investment5" />
+			</list>
+		</property>
+	</bean>
+	
+		<bean class="domain.Research" id="research3">
+		<property name="title" value="Research 3" />
+		<property name="subject" value="Vision and Crowdsensing Technology for an Optimal Response in Physical-Security" />
+		<property name="description" value="This is Research 3" />
+		<property name="projectWebpage" value="https://investigacion.us.es/sisius/sis_proyecto.php?idproy=28418" />
+		<property name="startDate"> <null/></property>
+		<property name="endDate"><null/></property>
+		<property name="minCost" value="4000.00" />
+		<property name="isCancelled" value="false" />
+		<property name="budget" value="1500.00" />
+		<property name="team">
+			<list>
+				<ref bean="expert1" />
+				<ref bean="expert4" />
+			</list>
+		</property>
+		<property name="investments">
+			<list>
+				<ref bean="investment6" />
+			</list>
+		</property>
+	</bean>
+
+
+		<bean class="domain.Research" id="research4">
+		<property name="title" value="Research 4" />
+		<property name="subject" value="La Formación a Través de Dispositivos Móviles. Diseño y Evaluación de Contenidos y Actividades Formativas a Través de M-Learning " />
+		<property name="description" value="This is Research 4" />
+		<property name="projectWebpage" value="https://investigacion.us.es/sisius/sis_proyecto.php?idproy=20734" />
+				<property name="startDate" value="2018/04/14/" />
+		<property name="endDate"><null/></property>
+		<property name="minCost" value="2000.00" />
+		<property name="isCancelled" value="true" />
+		<property name="budget" value="2100.00" />
+		<property name="team">
+			<list>
+				<ref bean="expert1" />
+				<ref bean="expert2" />
+			</list>
+		</property>
+		<property name="investments">
+			<list>
+				<ref bean="investment7" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Investments -->
+	
+	<bean class="domain.Investment" id="investment1">
+	
+		<property name="amount" value="2000.00" />
+		<property name="creditCard" ref="creditCard6" />
+		<property name="research" ref="research1" />
+		<property name="investor" ref="investor1" />
+	</bean>
+	
+	<bean class="domain.Investment" id="investment2">
+	
+		<property name="amount" value="4500.00" />
+		<property name="creditCard" ref="creditCard8" />
+		<property name="research" ref="research1" />
+		<property name="investor" ref="investor3" />
+	</bean>
+	
+		<bean class="domain.Investment" id="investment3">
+	
+		<property name="amount" value="3000.00" />
+		<property name="creditCard" ref="creditCard6" />
+		<property name="research" ref="research2" />
+		<property name="investor" ref="investor1" />
+	</bean>
+	
+	<bean class="domain.Investment" id="investment4">
+	
+		<property name="amount" value="9000.00" />
+		<property name="creditCard" ref="creditCard7" />
+		<property name="research" ref="research2" />
+		<property name="investor" ref="investor2" />
+	</bean>
+	
+		<bean class="domain.Investment" id="investment5">
+	
+		<property name="amount" value="6000.00" />
+		<property name="creditCard" ref="creditCard8" />
+		<property name="research" ref="research2" />
+		<property name="investor" ref="investor3" />
+	</bean>
+	
+		<bean class="domain.Investment" id="investment6">
+	
+		<property name="amount" value="1500.00" />
+		<property name="creditCard" ref="creditCard8" />
+		<property name="research" ref="research3" />
+		<property name="investor" ref="investor3" />
+	</bean>
+	
+		<bean class="domain.Investment" id="investment7">
+	
+		<property name="amount" value="2100.00" />
+		<property name="creditCard" ref="creditCard6" />
+		<property name="research" ref="research4" />
+		<property name="investor" ref="investor1" />
+	</bean>
+
+	<!-- Disciplines -->
+
+	<bean id="discipline1" class="domain.Discipline">
+		<property name="name" value="Java" />
+	</bean>
+
+	<bean id="discipline2" class="domain.Discipline">
+		<property name="name" value="Python" />
+	</bean>
+
+	<bean id="discipline3" class="domain.Discipline">
+		<property name="name" value="C++" />
+	</bean>
+
+	<bean id="discipline4" class="domain.Discipline">
+		<property name="name" value="C#" />
+	</bean>
+
+	<bean id="discipline5" class="domain.Discipline">
+		<property name="name" value="MySQL" />
+	</bean>
+
+	<bean id="discipline6" class="domain.Discipline">
+		<property name="name" value="Oracle" />
+	</bean>
+
+	<bean id="discipline7" class="domain.Discipline">
+		<property name="name" value="Javascript" />
+	</bean>
+
+	<bean id="discipline8" class="domain.Discipline">
+		<property name="name" value="jQuery" />
+	</bean>
+
+	<bean id="discipline9" class="domain.Discipline">
+		<property name="name" value="UML" />
+	</bean>
+	<bean id="discipline10" class="domain.Discipline">
+		<property name="name" value="HTML" />
+	</bean>
+
+
+	<bean id="discipline11" class="domain.Discipline">
+		<property name="name" value="CSS" />
+	</bean>
+
+	<bean id="discipline12" class="domain.Discipline">
+		<property name="name" value="JSTL" />
+	</bean>
+
+	<bean id="discipline13" class="domain.Discipline">
+		<property name="name" value="Spring" />
+	</bean>
+
+	<bean id="discipline14" class="domain.Discipline">
+		<property name="name" value="Hibernate" />
+	</bean>
+
+	<bean id="discipline15" class="domain.Discipline">
+		<property name="name" value="PHP" />
+	</bean>
+
+	<bean id="discipline16" class="domain.Discipline">
+		<property name="name" value="Android" />
+	</bean>
+
+	<!-- Forums -->
+
+	
+	<bean id="forum1" class="domain.Forum">
+		<property name="name" value="New members" />
+		<property name="description" value="Introduce yourselves to the SoftwareHouse community" />
+		<property name="linkPicture" value="http://www3.gobiernodecanarias.org/medusa/edublog/ceipisabellacatolica/wp-content/uploads/sites/176/2017/11/welcome-png-transparent.png" />
+		<property name="threads">
+		<list>
+		<ref bean="thread1"/>
+		<ref bean="thread2"/>
+		</list>
+		</property>
+		<property name="numPosts" value="5"/>
+		<property name="lastPost" ref="post5" />
+	</bean>
+
+		<bean id="forum2" class="domain.Forum">
+		<property name="name" value="SoftwareHouse News" />
+		<property name="description" value="Important news will be posted here regularly" />
+		<property name="linkPicture" value="https://www.mabonline.net/wp-content/uploads/2018/02/NEWS.png" />
+		<property name="threads">
+		<list>
+		<ref bean="thread9"/>
+		</list>
+		</property>
+		<property name="numPosts" value="4"/>
+		<property name="lastPost" ref="post34" />
+	</bean>
+	
+			<bean id="forum3" class="domain.Forum">
+		<property name="name" value="JAVA Chat" />
+		<property name="description" value="Ask your questions related to JAVA here" />
+		<property name="linkPicture" value="https://www.seeklogo.net/wp-content/uploads/2011/06/java-logo-vector.png" />
+		<property name="threads">
+		<list>
+		<ref bean="thread5"/>
+		<ref bean="thread6"/>
+		<ref bean="thread7"/>
+		<ref bean="thread8"/>
+		</list>
+		</property>
+		<property name="numPosts" value="17"/>
+		<property name="lastPost" ref="post30" />
+	</bean>
+	
+			<bean id="forum4" class="domain.Forum">
+		<property name="name" value="Python Chat" />
+		<property name="description" value="Ask your questions related to Python here" />
+		<property name="linkPicture" value="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/2000px-Python.svg.png" />
+		<property name="threads">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="0"/>
+		<property name="lastPost"> <null/></property>
+	</bean>
+	
+	<bean id="forum5" class="domain.Forum">
+		<property name="name" value="C++ Chat" />
+		<property name="description" value="Ask your questions related to C++ here" />
+		<property name="linkPicture" value="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/200px-ISO_C%2B%2B_Logo.svg.png" />
+		<property name="threads">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="0"/>
+		<property name="lastPost"> <null/></property>
+	</bean>
+	
+		<bean id="forum6" class="domain.Forum">
+		<property name="name" value="C# Chat" />
+		<property name="description" value="Ask your questions related to C# here" />
+		<property name="linkPicture" value="https://seeklogo.com/images/C/csharp-logo-58C6C6F67A-seeklogo.com.png" />
+		<property name="threads">
+		<list>
+		<ref bean="thread4"/>
+		</list>
+		</property>
+		<property name="numPosts" value="2"/>
+		<property name="lastPost" ref="post12" />
+		
+	</bean>
+	
+	<bean id="forum7" class="domain.Forum">
+		<property name="name" value="MySQL Chat" />
+		<property name="description" value="Ask your questions related to MySQL here" />
+		<property name="linkPicture" value="https://www.seeklogo.net/wp-content/uploads/2017/05/mysql-logo.png" />
+		<property name="threads">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="0"/>
+		<property name="lastPost"> <null/></property>
+	</bean>
+	
+		<bean id="forum8" class="domain.Forum">
+		<property name="name" value="Javascript Chat" />
+		<property name="description" value="Ask your questions related to Javascript here" />
+		<property name="linkPicture" value="https://seeklogo.com/images/J/javascript-logo-E967E87D74-seeklogo.com.png" />
+		<property name="threads">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="0"/>
+		<property name="lastPost"> <null/></property>
+	</bean>
+	
+		<bean id="forum9" class="domain.Forum">
+		<property name="name" value="PHP Chat" />
+		<property name="description" value="Ask your questions related to PHP here" />
+		<property name="linkPicture" value="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1024px-PHP-logo.svg.png" />
+		<property name="threads">
+		<list>
+		<ref bean="thread3"/>
+		</list>
+		</property>
+		<property name="numPosts" value="5"/>
+		<property name="lastPost" ref="post10" />
+	</bean>
+
+		<bean id="forum10" class="domain.Forum">
+		<property name="name" value="General talk" />
+		<property name="description" value="SoftwareHouse-related discussions. Including research and management" />
+		<property name="linkPicture" value="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Talk_%28Google%29.svg/400px-Talk_%28Google%29.svg.png" />
+		<property name="threads">
+		<list>
+		<ref bean="thread10"/>
+		</list>
+		</property>
+		<property name="numPosts" value="0"/>
+		<property name="lastPost"> <null/></property>
+	</bean>
+
+<!-- Threads and posts -->
+
+
+
+		<bean id="thread1" class="domain.Thread">
+		<property name="startMoment" value="2017/11/19/ 21:46"/>
+		<property name="title" value="Hello everyone!" />
+		<property name="text" value="My name is Oliva. I am new to this forum. I am a novice PHP deleloper. I am here to learn new things." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="4" />
+		<property name="momentLastModification" value="2017/11/21/ 19:56"/>
+		<property name="writer" ref="apprentice4"/>
+		<property name="forum" ref="forum1"/>
+			<property name="posts">
+		<list>
+		<ref bean="post1"/>
+		<ref bean="post2"/>
+		<ref bean="post3"/>
+		</list>
+		</property>
+		<property name="disciplines">
+		<list>
+		</list>
+		</property>
+		<property name="lastPost" ref="post4"/>
+		<property name="isBestAnswerEnabled" value="true" />
+	</bean>
+	
+		<bean id="post1" class="domain.Post">
+		<property name="publicationMoment" value="2017/11/20/ 10:12"/>
+		<property name="text" value="Hello. Welcome to our community." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="apprentice1"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread1"/>
+		<property name="topic" ref="thread1"/>
+	</bean>
+	
+		<bean id="post2" class="domain.Post">
+		<property name="publicationMoment" value="2017/11/20/ 13:42"/>
+		<property name="text" value="Welcome!" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="apprentice2"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread1"/>
+		<property name="topic" ref="thread1"/>
+	</bean>
+	
+		<bean id="post3" class="domain.Post">
+		<property name="publicationMoment" value="2017/11/21/ 18:12"/>
+		<property name="text" value="Welcome Oliva. I am a PHP developer too and I am willing to help you with whatever you need." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="1" />
+		<property name="writer" ref="apprentice3"/>
+		<property name="posts">
+		<list>
+		<ref bean="post4"/>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread1"/>
+		<property name="topic" ref="thread1"/>
+	</bean>
+	
+		<bean id="post4" class="domain.Post">
+		<property name="publicationMoment" value="2017/11/21/ 19:56"/>
+		<property name="text" value="Thank you!!!" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="apprentice4"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost" ref="post3"/>
+		<property name="thread"><null/></property>
+		<property name="topic" ref="thread1"/>
+	</bean>
+	
+		<bean id="thread2" class="domain.Thread">
+		<property name="startMoment" value="2017/12/27/ 14:18"/>
+		<property name="title" value="Greetings from Seville!" />
+		<property name="text" value="Hello. I am a novice JAVA developer. I have just signed up as an APPRENTICE in SoftwareHouse. I'm currently studying at ETSII, Seville. I have many questions related to JAVA programming and I will need help." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="1" />
+		<property name="momentLastModification" value="2017/12/30/ 23:10"/>
+		<property name="writer" ref="apprentice5"/>
+		<property name="forum" ref="forum1"/>
+			<property name="posts">
+		<list>
+		<ref bean="post5"/>
+		</list>
+		</property>
+		<property name="disciplines">
+		<list>
+		</list>
+		</property>
+		<property name="lastPost" ref="post5"/>
+		<property name="isBestAnswerEnabled" value="true" />
+	</bean>
+
+		<bean id="post5" class="domain.Post">
+		<property name="publicationMoment" value="2017/12/30/ 23:10"/>
+		<property name="text" value="Hi and welcome to the SoftwareHouse Community." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="apprentice1"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread2"/>
+		<property name="topic" ref="thread2"/>
+	</bean>
+
+	
+		<bean id="thread3" class="domain.Thread">
+		<property name="startMoment" value="2018/03/02/ 17:08"/>
+		<property name="title" value="How can I prevent SQL injection in PHP?" />
+		<property name="text" value="If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection. What can be done to prevent this from happening?" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="5" />
+		<property name="momentLastModification" value="2018/03/04/ 20:35"/>
+		<property name="writer" ref="apprentice3"/>
+		<property name="forum" ref="forum9"/>
+			<property name="posts">
+		<list>
+		<ref bean="post6"/>
+		<ref bean="post10"/>
+		</list>
+		</property>
+		<property name="disciplines">
+		<list>
+		<ref bean="discipline15"/>
+		</list>
+		</property>
+		<property name="lastPost" ref="post10"/>
+		<property name="isBestAnswerEnabled" value="false" />
+	</bean>
+	
+		<bean id="post6" class="domain.Post">
+		<property name="publicationMoment" value="2018/03/02/ 20:00"/>
+		<property name="text" value="I'd recommend using PDO (PHP Data Objects) to run parameterized SQL queries. Not only does this protect against SQL injection, it also speeds up queries." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="3" />
+		<property name="writer" ref="apprentice2"/>
+		<property name="posts">
+		<list>
+		<ref bean="post7"/>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread3"/>
+		<property name="topic" ref="thread3"/>
+	</bean>
+	
+		<bean id="post7" class="domain.Post">
+		<property name="publicationMoment" value="2018/03/02/ 20:19"/>
+		<property name="text" value="doesn't PDO wrap MySQLi for MySQL DBs? In which case surely it can't be any quicker than MySQLi." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="2" />
+		<property name="writer" ref="apprentice3"/>
+		<property name="posts">
+		<list>
+		<ref bean="post8"/>
+		</list>
+		</property>
+		<property name="parentPost" ref="post6"/>
+		<property name="thread"><null/></property>
+		<property name="topic" ref="thread3"/>
+	</bean>
+	
+			<bean id="post8" class="domain.Post">
+		<property name="publicationMoment" value="2018/03/02/ 23:38"/>
+		<property name="text" value="Using parameterized queries is what speeds up the queries. Technically mysqli might be even faster by a very small margin. The actual amount of time the server takes to respond the the query eclipses any difference in timing that might happen because you are using a wrapper. But mysqli is tied to the database. If you want to use a different database engine, you have to change all the calls that use mysqli. Not so for PDO." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="1" />
+		<property name="writer" ref="apprentice2"/>
+		<property name="posts">
+		<list>
+		<ref bean="post9"/>
+		</list>
+		</property>
+		<property name="parentPost" ref="post7"/>
+		<property name="thread"><null/></property>
+		<property name="topic" ref="thread3"/>
+	</bean>
+	
+			<bean id="post9" class="domain.Post">
+		<property name="publicationMoment" value="2018/03/02/ 23:59"/>
+		<property name="text" value="Ok. Thanks." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="apprentice3"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost" ref="post8"/>
+		<property name="thread"><null/></property>
+		<property name="topic" ref="thread3"/>
+	</bean>
+	
+			<bean id="post10" class="domain.Post">
+		<property name="publicationMoment" value="2018/03/04/ 20:35"/>
+		<property name="text" value="Use prepared statements and parameterized queries. These are SQL statements that are sent to and parsed by the database server separately from any parameters. This way it is impossible for an attacker to inject malicious SQL. You basically have two options to achieve this: 1) Using PDO (for any supported database driver). 2) Using MySQLi (for MySQL). I'd say that PDO is the universal option." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="true" />
+		<property name="isReliable" value="true" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="expert2"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread3"/>
+		<property name="topic" ref="thread3"/>
+	</bean>
+	
+	
+		<bean id="thread4" class="domain.Thread">
+		<property name="startMoment" value="2018/01/18/ 10:02"/>
+		<property name="title" value="C# classes - basic example" />
+		<property name="text" value="This is basically my first attempt to understand the classes in C#. I've went through several tutorials on the internet, but the thing I'm missing the most and what I haven't found anywhere yet, is a simple good example." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="2" />
+		<property name="momentLastModification" value="2018/01/20/ 18:31"/>
+		<property name="writer" ref="apprentice5"/>
+		<property name="forum" ref="forum6"/>
+			<property name="posts">
+		<list>
+		<ref bean="post11"/>
+		</list>
+		</property>
+		<property name="disciplines">
+		<list>
+		<ref bean="discipline4"/>
+		</list>
+		</property>
+		<property name="lastPost" ref="post12"/>
+		<property name="isBestAnswerEnabled" value="false" />
+	</bean>
+	
+	<bean id="post11" class="domain.Post">
+		<property name="publicationMoment" value="2018/01/20/ 11:28"/>
+		<property name="text" value="Hello, Eduardo. Here's an example:" />
+		<property name="linksAttachments">
+		<list>
+		<value>http://www.tutorialsteacher.com/Content/images/csharp/csharp-class.png</value>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="true" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="1" />
+		<property name="writer" ref="expert3"/>
+		<property name="posts">
+		<list>
+		<ref bean="post12"/>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread4"/>
+		<property name="topic" ref="thread4"/>
+	</bean>
+	
+		<bean id="post12" class="domain.Post">
+		<property name="publicationMoment" value="2018/01/20/ 18:31"/>
+		<property name="text" value="I'd pay for such help! :-) Thank you." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="apprentice5"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost" ref="post11"/>
+		<property name="thread"><null/> </property>
+		<property name="topic" ref="thread4"/>
+	</bean>
+	
+	<bean id="thread5" class="domain.Thread">
+		<property name="startMoment" value="2017/11/29/ 06:41"/>
+		<property name="title" value="What is the use of hashcode in Java?" />
+		<property name="text" value="In Java obj.hashcode() returns some value. What is the use of this hash code in programming?" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="12" />
+		<property name="momentLastModification" value="2018/02/15/ 13:41"/>
+		<property name="writer" ref="apprentice2"/>
+		<property name="forum" ref="forum3"/>
+			<property name="posts">
+		<list>
+		<ref bean="post13"/>
+		<ref bean="post14"/>
+		<ref bean="post18"/>
+		<ref bean="post19"/>
+		<ref bean="post24"/>
+		</list>
+		</property>
+		<property name="disciplines">
+		<list>
+		<ref bean="discipline1"/>
+		</list>
+		</property>
+		<property name="lastPost" ref="post24"/>
+		<property name="isBestAnswerEnabled" value="false" />
+	</bean>
+	
+	
+	<bean id="post13" class="domain.Post">
+		<property name="publicationMoment" value="2017/12/01/ 09:26"/>
+		<property name="text" value="Hashcode is a unique code which is generated by the JVM for every object creation..we use hashcode to perform some operation on hashing related algorithm like hashtable,hashmap etc..the advantages of hashcode is it makes searching operation easy bcoz when we search for an object that unique code helps to find out that obj. But we can't say hashcode is the address of an obj. It z a unique code generated by JVM for every object..that's y now the day hashing algorithm z most popular search algorithm" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="apprentice1"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread5"/>
+		<property name="topic" ref="thread5"/>
+	</bean>
+	
+		<bean id="post14" class="domain.Post">
+		<property name="publicationMoment" value="2017/12/03/ 12:37"/>
+		<property name="text" value="hashCode() is used for bucketing in Hash implementations like HashMap, HashTable, HashSet, etc. The value received from hashCode() is used as the bucket number for storing elements of the set/map. This bucket number is the address of the element inside the set/map. When you do contains() it will take the hash code of the element, then look for the bucket where hash code points to. If more than 1 element is found in the same bucket (multiple objects can have the same hash code), then it uses the equals() method to evaluate if the objects are equal, and then decide if contains() is true or false, or decide if element could be added in the set or not." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="true" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="3" />
+		<property name="writer" ref="expert6"/>
+		<property name="posts">
+		<list>
+		<ref bean="post15"/>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread5"/>
+		<property name="topic" ref="thread5"/>
+	</bean>
+	
+	<bean id="post15" class="domain.Post">
+		<property name="publicationMoment" value="2017/12/03/ 19:59"/>
+		<property name="text" value="So what if there is only one hash code matched element found, it returns true directly? but since multiple objects can have the same hash code so it has to run equals() to evaluate if the matched element is equal, else it may give you the unexpected result, am I right?" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="2" />
+		<property name="writer" ref="apprentice2"/>
+		<property name="posts">
+		<list>
+		<ref bean="post16"/>
+		</list>
+		</property>
+		<property name="parentPost" ref="post14"/>
+		<property name="thread"><null/> </property>
+		<property name="topic" ref="thread5"/>
+	</bean>
+	
+		<bean id="post16" class="domain.Post">
+		<property name="publicationMoment" value="2017/12/07/ 14:21"/>
+		<property name="text" value="Buckets aside, hashcode is a method that the object calls to determine the order to store each object in memory. If objects are equal, then their hashcode must also be equal." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="true" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="1" />
+		<property name="writer" ref="expert6"/>
+		<property name="posts">
+		<list>
+		<ref bean="post17"/>
+		</list>
+		</property>
+		<property name="parentPost" ref="post15"/>
+		<property name="thread"><null/> </property>
+		<property name="topic" ref="thread5"/>
+	</bean>
+	
+		<bean id="post17" class="domain.Post">
+		<property name="publicationMoment" value="2017/12/08/ 22:11"/>
+		<property name="text" value="Ok. Thanks." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="apprentice2"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost" ref="post16"/>
+		<property name="thread"><null/> </property>
+		<property name="topic" ref="thread5"/>
+	</bean>
+	
+		<bean id="post18" class="domain.Post">
+		<property name="publicationMoment" value="2017/12/20/ 15:04"/>
+		<property name="text" value="A hashcode() is a function that takes an object and outputs a numeric value. The hashcode for an object is always the same if the object doesn't change. Functions like HashMap, HashTable, HashSet, etc that need to store objects, will use a hashcode modulo the size of their internal array to choose in what 'memory position' (i.e. array position) to store the object. There are some cases where collisions may occur (two objects end up with the same hashcode, and that, of course, need to be solved carefully)." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="true" />
+		<property name="isReliable" value="true" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="expert5"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread5"/>
+		<property name="topic" ref="thread5"/>
+	</bean>
+	
+	<bean id="post19" class="domain.Post">
+		<property name="publicationMoment" value="2018/02/02/ 16:20"/>
+		<property name="text" value="Hello. Everyone. I have a question related to this topic. Can I use the hashcode method to test object equality in a certain class?" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="4" />
+		<property name="writer" ref="apprentice4"/>
+		<property name="posts">
+		<list>
+		<ref bean="post20"/>
+		<ref bean="post23"/>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread5"/>
+		<property name="topic" ref="thread5"/>
+	</bean>
+	
+		<bean id="post20" class="domain.Post">
+		<property name="publicationMoment" value="2018/02/06/ 11:52"/>
+		<property name="text" value="The hashCode method for a given class can be used to test for object inequality, but NOT object equality, for that class. The hashCode method is used by the java.util.HashSet collection class to group the elements within that set into hash buckets for swift retrieval." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="2" />
+		<property name="writer" ref="apprentice2"/>
+		<property name="posts">
+		<list>
+		<ref bean="post21"/>
+		<ref bean="post22"/>
+		</list>
+		</property>
+		<property name="parentPost" ref="post19"/>
+		<property name="thread"><null/> </property>
+		<property name="topic" ref="thread5"/>
+	</bean>
+	
+			<bean id="post21" class="domain.Post">
+		<property name="publicationMoment" value="2018/02/07/ 12:36"/>
+		<property name="text" value="Thanks." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="apprentice4"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost" ref="post20"/>
+		<property name="thread"><null/> </property>
+		<property name="topic" ref="thread5"/>
+	</bean>
+	
+			<bean id="post22" class="domain.Post">
+		<property name="publicationMoment" value="2018/02/12/ 18:18"/>
+		<property name="text" value="I suggest either correcting or deleting this answer." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="true" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="expert6"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost" ref="post20"/>
+		<property name="thread"><null/> </property>
+		<property name="topic" ref="thread5"/>
+	</bean>
+	
+			<bean id="post23" class="domain.Post">
+		<property name="publicationMoment" value="2018/02/12/ 18:34"/>
+		<property name="text" value="No, you can't. Two unequal objects can have the same hash code, so using hash codes to test for inequality will give false positives. " />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="true" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="expert6"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost" ref="post19"/>
+		<property name="thread"><null/> </property>
+		<property name="topic" ref="thread5"/>
+	</bean>
+	
+				<bean id="post24" class="domain.Post">
+		<property name="publicationMoment" value="2018/02/15/ 13:41"/>
+		<property name="text" value="Ok. Thank you so much. Now I understand it." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="apprentice4"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost"> <null/> </property>
+		<property name="thread" ref = "thread5"/>
+		<property name="topic" ref="thread5"/>
+	</bean>
+	
+	<bean id="thread6" class="domain.Thread">
+		<property name="startMoment" value="2018/01/31/ 09:54"/>
+		<property name="title" value="Difference between Mutable objects and Immutable objects" />
+		<property name="text" value="Anyone, please, explain me the difference between Mutable objects and Immutable objects with example." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="3" />
+		<property name="momentLastModification" value="2018/04/12/ 19:11"/>
+		<property name="writer" ref="apprentice2"/>
+		<property name="forum" ref="forum3"/>
+			<property name="posts">
+		<list>
+		<ref bean="post25"/>
+		<ref bean="post26"/>
+		</list>
+		</property>
+		<property name="disciplines">
+		<list>
+		<ref bean="discipline1"/>
+		<ref bean="discipline2"/>
+		<ref bean="discipline8"/>
+		</list>
+		</property>
+		<property name="lastPost" ref="post28"/>
+		<property name="isBestAnswerEnabled" value="true" />
+	</bean>
+	
+				<bean id="post25" class="domain.Post">
+		<property name="publicationMoment" value="2018/02/04/ 20:09"/>
+		<property name="text" value="Mutable objects have fields that can be changed, immutable objects have no fields that can be changed after the object is created. A very simple immutable object is a object without any field. (For example a simple Comparator Implementation)." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="expert6"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost"> <null/> </property>
+		<property name="thread" ref = "thread6"/>
+		<property name="topic" ref="thread6"/>
+	</bean>
+	
+				<bean id="post26" class="domain.Post">
+		<property name="publicationMoment" value="2018/04/10/ 13:08"/>
+		<property name="text" value="They are not different from the point of view of JVM. Immutable objects don't have methods that can change the instance variables. And the instance variables are private; therefore you can't change it after you create it. A famous example would be String. You don't have methods like setString, or setCharAt. And s1 = s1 + 'w' will create a new string, with the original one abandoned. That's my understanding." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="1" />
+		<property name="writer" ref="apprentice5"/>
+		<property name="posts">
+		<list>
+		<ref bean="post27"/>
+		</list>
+		</property>
+		<property name="parentPost"> <null/> </property>
+		<property name="thread" ref = "thread6"/>
+		<property name="topic" ref="thread6"/>
+	</bean>
+	
+				<bean id="post27" class="domain.Post">
+		<property name="publicationMoment" value="2018/04/12/ 10:29"/>
+		<property name="text" value="... and all instance variables are private! (otherwise -> mutable)" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="expert2"/>
+		<property name="posts">
+		<list>
+		<ref bean="post28"/>
+		</list>
+		</property>
+		<property name="parentPost" ref="post26"/>
+		<property name="thread"><null/></property>
+		<property name="topic" ref="thread6"/>
+	</bean>
+	
+			<bean id="post28" class="domain.Post">
+		<property name="publicationMoment" value="2018/04/12/ 18:50"/>
+		<property name="text" value="DELETEDBYUSER" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="true" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="apprentice5"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost" ref="post27"/>
+		<property name="thread"><null/></property>
+		<property name="topic" ref="thread6"/>
+	</bean>
+
+
+<bean id="thread7" class="domain.Thread">
+		<property name="startMoment" value="2018/03/12/ 07:43"/>
+		<property name="title" value="How to fix this NullPointerException?" />
+		<property name="text" value="I'm working on a project for a programming class and after attempting to run this program I'm getting NullPointerExceptions on the four lines listed in the code here. I know a NullPointerException comes from trying to access something that's null, but I'm not sure of how to fix it." />
+		<property name="linksAttachments">
+		<list>
+		<value>https://i.stack.imgur.com/nWCRz.png</value>
+		</list>
+		</property>
+		<property name="numPosts" value="1" />
+		<property name="momentLastModification" value="2018/03/15/ 22:23"/>
+		<property name="writer" ref="apprentice4"/>
+		<property name="forum" ref="forum3"/>
+			<property name="posts">
+		<list>
+		<ref bean="post29"/>
+		</list>
+		</property>
+		<property name="disciplines">
+		<list>
+		<ref bean="discipline1"/>
+		</list>
+		</property>
+		<property name="lastPost" ref="post29"/>
+		<property name="isBestAnswerEnabled" value="false" />
+	</bean>
+	
+				<bean id="post29" class="domain.Post">
+		<property name="publicationMoment" value="2018/03/15/ 22:23"/>
+		<property name="text" value="You are 'resetting' a previously initialized Random instance and causing an NPE to be thrown on the first attempted method call using that instance." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="true" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="apprentice1"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread7"/>
+		<property name="topic" ref="thread7"/>
+	</bean>
+	
+	
+	<bean id="thread8" class="domain.Thread">
+		<property name="startMoment" value="2018/04/19/ 16:25"/>
+		<property name="title" value="When to use LinkedList over ArrayList?" />
+		<property name="text" value="When should LinkedList be used over ArrayList and vice-versa?" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="1" />
+		<property name="momentLastModification" value="2018/04/24/ 18:25"/>
+		<property name="writer" ref="apprentice1"/>
+		<property name="forum" ref="forum3"/>
+			<property name="posts">
+		<list>
+		<ref bean="post30"/>
+		</list>
+		</property>
+		<property name="disciplines">
+		<list>
+		</list>
+		</property>
+		<property name="lastPost" ref="post30"/>
+		<property name="isBestAnswerEnabled" value="true" />
+	</bean>
+	
+				<bean id="post30" class="domain.Post">
+		<property name="publicationMoment" value="2018/04/24/ 18:25"/>
+		<property name="text" value="LinkedList allows for constant-time insertions or removals using iterators, but only sequential access of elements. In other words, you can walk the list forwards or backwards, but finding a position in the list takes time proportional to the size of the list. Javadoc says 'operations that index into the list will traverse the list from the beginning or the end, whichever is closer', so those methods are O(n) (n/4 steps) on average, though O(1) for index = 0. ArrayList, on the other hand, allow fast random read access, so you can grab any element in constant time. But adding or removing from anywhere but the end requires shifting all the latter elements over, either to make an opening or fill the gap. Also, if you add more elements than the capacity of the underlying array, a new array (1.5 times the size) is allocated, and the old array is copied to the new one, so adding to an ArrayList is O(n) in the worst case but constant on average." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="true" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="expert4"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread8"/>
+		<property name="topic" ref="thread8"/>
+	</bean>
+	
+		<bean id="thread9" class="domain.Thread">
+		<property name="startMoment" value="2018/05/01/ 16:00"/>
+		<property name="title" value="New contest available" />
+		<property name="text" value="Hello! I'd like to inform you that a new contest for Android developers will take place on 1st of August, 2018 at 17:20. You need to have at least 50 points in order to participate. If you don't have 50 points, you will have to pay 30.00 euros. If you want to participate in the contest, send your application as soon as possible. It's highly recommended that you send us a motivation letter." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="4" />
+		<property name="momentLastModification" value="2018/05/08/ 19:32"/>
+		<property name="writer" ref="manager1"/>
+		<property name="forum" ref="forum2"/>
+			<property name="posts">
+		<list>
+		<ref bean="post31"/>
+		<ref bean="post33"/>
+		</list>
+		</property>
+		<property name="disciplines">
+		<list>
+		<ref bean="discipline16"/>
+		</list>
+		</property>
+		<property name="lastPost" ref="post34"/>
+		<property name="isBestAnswerEnabled" value="false" />
+	</bean>
+	
+					<bean id="post31" class="domain.Post">
+		<property name="publicationMoment" value="2018/05/06/ 19:04"/>
+		<property name="text" value="What will be the durarion of the contest?" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="1" />
+		<property name="writer" ref="apprentice1"/>
+		<property name="posts">
+		<list>
+		<ref bean="post32"/>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread9"/>
+		<property name="topic" ref="thread9"/>
+	</bean>
+	
+						<bean id="post32" class="domain.Post">
+		<property name="publicationMoment" value="2018/05/06/ 20:41"/>
+		<property name="text" value="The duration will be aproximately 90  minutes." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="manager1"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost" ref="post31"/>
+		<property name="thread"><null/></property>
+		<property name="topic" ref="thread9"/>
+	</bean>
+	
+					<bean id="post33" class="domain.Post">
+		<property name="publicationMoment" value="2018/05/08/ 14:27"/>
+		<property name="text" value="What prize will be given to the winner?" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="1" />
+		<property name="writer" ref="apprentice2"/>
+		<property name="posts">
+		<list>
+		<ref bean="post34"/>
+		</list>
+		</property>
+		<property name="parentPost"><null/></property>
+		<property name="thread" ref="thread9"/>
+		<property name="topic" ref="thread9"/>
+	</bean>
+	
+						<bean id="post34" class="domain.Post">
+		<property name="publicationMoment" value="2018/05/08/ 19:32"/>
+		<property name="text" value="750.00 euros." />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="isBestAnswer" value="false" />
+		<property name="isReliable" value="false" />
+		<property name="isDeleted" value="false" />
+		<property name="numPosts" value="0" />
+		<property name="writer" ref="manager1"/>
+		<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="parentPost" ref="post33"/>
+		<property name="thread"><null/></property>
+		<property name="topic" ref="thread9"/>
+	</bean>
+	
+		<bean id="thread10" class="domain.Thread">
+		<property name="startMoment" value="2018/05/10/ 17:04"/>
+		<property name="title" value="Funding offer" />
+		<property name="text" value="Hello, everyone. Is there any project that needs funding?" />
+		<property name="linksAttachments">
+		<list>
+		</list>
+		</property>
+		<property name="numPosts" value="0" />
+		<property name="momentLastModification" value="2018/05/10/ 17:04"/>
+		<property name="writer" ref="investor2"/>
+		<property name="forum" ref="forum10"/>
+			<property name="posts">
+		<list>
+		</list>
+		</property>
+		<property name="disciplines">
+		<list>
+		</list>
+		</property>
+		<property name="lastPost"><null/></property>
+		<property name="isBestAnswerEnabled" value="false" />
+	</bean>
+	
+
+</beans>

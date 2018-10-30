@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	
+	
+	<definition name="research/list" extends="master.page">
+		<put-attribute name="title" value="Research list" />
+		<put-attribute name="body" value="/views/research/list.jsp" />
+	</definition>
+	
+	
+	<definition name="research/display" extends="master.page">
+		<put-attribute name="title" value="Display research" />
+		<put-attribute name="body" value="/views/research/display.jsp" />
+	</definition>
+	
+	
+	<definition name="research/edit" extends="master.page">
+		<put-attribute name="title" value="Edit research" />
+		<put-attribute name="body" value="/views/research/edit.jsp" />
+	</definition>
+
+	
+</tiles-definitions>

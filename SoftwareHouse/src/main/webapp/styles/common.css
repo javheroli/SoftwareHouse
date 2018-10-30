@@ -1,0 +1,95 @@
+/* common.css
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ * 
+ */
+
+
+#progressBar {
+  width: 90%;
+  height: 22px;
+  background-color: #cccccc;
+}
+
+#progressBar div {
+  height: 100%;
+  text-align: right;
+  padding: 0 10px;
+  line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+  width: 0;
+  background-color: #66ff33;
+  box-sizing: border-box;
+}
+
+/* Do not take in account */
+html{padding-top:30px}a.solink{position:fixed;top:0;width:100%;text-align:center;background:#f3f5f6;color:#cfd6d9;border:1px solid #cfd6d9;line-height:30px;text-decoration:none;transition:all .3s;z-index:999}a.solink::first-letter{text-transform:capitalize}a.solink:hover{color:#428bca}
+
+
+
+.error {
+	color: red;
+	font-weight: bolder;
+}
+
+.good {
+	color: green;
+	font-weight: bolder;
+}
+
+.message {
+	color: red;
+	font-weight: bolder;
+}
+
+.dueApplication{
+	background-color:#ffd700;
+}
+
+.rejectedApplication{
+	background-color:#ff6666;
+}
+
+.pendingApplication{
+	background-color:#f2f2f2;
+}
+
+.acceptedApplication{
+	background-color:#80ff80;
+}
+
+.dueImage{
+	height:100px;
+	width:100px;
+	float:right;
+	margin-right: 80%;
+}
+
+.pendingImage{
+	height:90px;
+	width:100px;
+	float:right;
+	margin-right: 80%;
+}
+
+.acceptedImage{
+	height:60px;
+	width:120px;
+	float:right;
+	margin-right: 79%;
+}
+
+.rejectedImage{
+	height:60px;
+	width:120px;
+	float:right;
+	margin-right: 79%;
+}
+.textareaExam{
+	margin-left: 30px;
+}
+
+

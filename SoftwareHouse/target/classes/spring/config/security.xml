@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ * security.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"	
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd		
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+    ">
+
+	<!-- Security infrastructure -->
+
+	<bean id="loginService" class="security.LoginService" />
+
+	<bean id="passwordEncoder"
+		class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" />
+
+	<!-- Access control -->
+
+	<security:http auto-config="true" use-expressions="true">
+		<security:intercept-url pattern="/" access="permitAll" /> 
+
+		<security:intercept-url pattern="/favicon.ico" access="permitAll" /> 
+		<security:intercept-url pattern="/images/**" access="permitAll" /> 
+		<security:intercept-url pattern="/scripts/**" access="permitAll" /> 
+		<security:intercept-url pattern="/styles/**" access="permitAll" /> 
+
+		<security:intercept-url pattern="/views/misc/index.jsp" access="permitAll" /> 
+
+		<security:intercept-url pattern="/security/login.do" access="permitAll" /> 
+		<security:intercept-url pattern="/security/loginFailure.do" access="permitAll" /> 
+
+		<security:intercept-url pattern="/welcome/index.do" access="permitAll" /> 
+		<security:intercept-url pattern="/welcome/cookiePolicy.do"
+			access="permitAll" />
+			
+		<security:intercept-url pattern="/welcome/termsAndConditions.do"
+			access="permitAll" />
+			
+			<security:intercept-url access="permitAll"
+			pattern="/apprentice/edit.do" />
+		<security:intercept-url access="permitAll"
+			pattern="/apprentice/create.do" />
+		
+		
+		<security:intercept-url access="permitAll"
+			pattern="/investor/edit.do" />
+		<security:intercept-url access="permitAll"
+			pattern="/investor/create.do" />
+			
+			<security:intercept-url access="permitAll"
+			pattern="/forum/list.do" />
+			
+		<security:intercept-url access="permitAll"
+			pattern="/forum/display.do" />
+			
+				<security:intercept-url access="permitAll"
+			pattern="/post/list.do" />
+		
+		<security:intercept-url access="isAuthenticated()"
+			pattern="/actor/actor/display.do" />
+			
+		<security:intercept-url access="isAuthenticated()"
+			pattern="/actor/actor/list.do" />
+			
+			<security:intercept-url access="isAuthenticated()"
+			pattern="/actor/actor/redirect.do" />
+			
+			<security:intercept-url access="isAuthenticated()"
+			pattern="/apprentice/actor/display.do" />
+			
+			<security:intercept-url access="isAuthenticated()"
+			pattern="/expert/actor/display.do" />
+			
+			<security:intercept-url access="isAuthenticated()"
+			pattern="/manager/actor/display.do" />
+			
+			<security:intercept-url access="isAuthenticated()"
+			pattern="/administrator/actor/display.do" />
+			
+			<security:intercept-url access="isAuthenticated()"
+			pattern="/investor/actor/display.do" />
+			
+			<security:intercept-url access="isAuthenticated()"
+			pattern="/post/actor/create.do" />
+			
+			<security:intercept-url access="isAuthenticated()"
+			pattern="/post/actor/edit.do" />
+			
+			<security:intercept-url access="isAuthenticated()"
+			pattern="/thread/actor/create.do" />
+			
+			<security:intercept-url access="isAuthenticated()"
+			pattern="/thread/actor/edit.do" />
+		
+		
+		<security:intercept-url pattern="/contest/actor/list.do" 
+			access="hasRole('APPRENTICE') || hasRole('EXPERT') || hasRole('MANAGER')" /> 
+		
+		<security:intercept-url pattern="/contest/actor/display.do" 
+			access="hasRole('APPRENTICE') || hasRole('EXPERT') || hasRole('MANAGER') || hasRole('ADMIN')" />
+		
+		<security:intercept-url pattern="/post/apprentice/mark.do" access="hasRole('APPRENTICE')" />
+		
+		
+		<security:intercept-url pattern="/contest/manager/list.do" 
+			access="hasRole('MANAGER')" />
+			
+		<security:intercept-url pattern="/contest/manager/create.do" 
+			access="hasRole('MANAGER')" />
+			
+		<security:intercept-url pattern="/contest/manager/edit.do" 
+			access="hasRole('MANAGER')" />
+			
+		<security:intercept-url pattern="/expert/manager/list.do" 
+			access="hasRole('MANAGER')" />
+			
+		<security:intercept-url pattern="/application/manager/list.do" 
+			access="hasRole('MANAGER')" />
+			
+		<security:intercept-url pattern="/application/manager/reject.do" 
+			access="hasRole('MANAGER')" />	
+			
+		<security:intercept-url pattern="/application/manager/approve.do" 
+			access="hasRole('MANAGER')" />
+			
+			
+			
+		
+		
+		<security:intercept-url pattern="/contest/expert/listEditor.do" 
+			access="hasRole('EXPERT')" /> 
+		
+		<security:intercept-url access="hasRole('EXPERT')"
+			pattern="/expert/expert/edit.do" />
+		
+		<security:intercept-url pattern="/contest/expert/listJudge.do" 
+			access="hasRole('EXPERT')" /> 
+			
+		<security:intercept-url pattern="/solution/expert/list.do" 
+			access="hasRole('EXPERT')" />
+			
+			<security:intercept-url pattern="/problem/expert/create.do" 
+			access="hasRole('EXPERT')" />
+			
+			<security:intercept-url pattern="/problem/expert/edit.do" 
+			access="hasRole('EXPERT')" />
+			
+			<security:intercept-url pattern="/research/expert/list.do" 
+			access="hasRole('EXPERT')" />
+			
+			<security:intercept-url pattern="/research/expert/display.do" 
+			access="hasRole('EXPERT')" />
+			
+			<security:intercept-url pattern="/research/expert/create.do" 
+			access="hasRole('EXPERT')" />
+			
+			<security:intercept-url pattern="/research/expert/edit.do" 
+			access="hasRole('EXPERT')" />
+			
+			<security:intercept-url pattern="/research/expert/cancel.do" 
+			access="hasRole('EXPERT')" />
+			
+				<security:intercept-url pattern="/research/expert/finalize.do" 
+			access="hasRole('EXPERT')" />
+			
+			<security:intercept-url pattern="/solution/expert/edit.do" 
+			access="hasRole('EXPERT')" />
+			
+			
+	
+				
+		<security:intercept-url access="hasRole('MANAGER')"
+			pattern="/manager/manager/edit.do" />
+			
+			
+		
+		
+			
+	<security:intercept-url access="hasRole('APPRENTICE')"
+			pattern="/apprentice/apprentice/edit.do" />
+			
+	<security:intercept-url access="hasRole('APPRENTICE')"
+			pattern="/application/apprentice/list.do" />
+			
+			
+	<security:intercept-url access="hasRole('APPRENTICE')"
+			pattern="/application/apprentice/create.do" />
+			
+	<security:intercept-url access="hasRole('APPRENTICE')"
+			pattern="/application/apprentice/edit.do" />
+			
+	<security:intercept-url access="hasRole('APPRENTICE')"
+			pattern="/application/apprentice/confirm.do" />
+			
+	<security:intercept-url access="hasRole('APPRENTICE')"
+			pattern="/solution/apprentice/list.do" />
+			
+	<security:intercept-url access="hasRole('APPRENTICE')"
+			pattern="/solution/apprentice/create.do" />
+			
+	<security:intercept-url access="hasRole('APPRENTICE')"
+			pattern="/solution/apprentice/edit.do" />
+			
+			
+	<security:intercept-url access="hasRole('INVESTOR')"
+			pattern="/investor/investor/edit.do" />
+	<security:intercept-url access="hasRole('INVESTOR')"
+			pattern="/research/investor/listAll.do" />
+	<security:intercept-url access="hasRole('INVESTOR')"
+			pattern="/research/investor/listForFunding.do" />
+	<security:intercept-url access="hasRole('INVESTOR')"
+			pattern="/research/investor/display.do" />
+	<security:intercept-url access="hasRole('INVESTOR')"
+			pattern="/investment/investor/list.do" />
+	<security:intercept-url access="hasRole('INVESTOR')"
+			pattern="/investment/investor/create.do" />
+			
+		
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/administrator/administrator/edit.do" />
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/administrator/administrator/create.do" />
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/expert/administrator/create.do" />
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/manager/administrator/create.do" />
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/discipline/administrator/create.do" />
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/discipline/administrator/list.do" />
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/discipline/administrator/delete.do" />
+			
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/thread/administrator/delete.do" />
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/post/administrator/delete.do" />
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/forum/administrator/create.do" />
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/forum/administrator/edit.do" />
+
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/research/administrator/list.do" />
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/research/administrator/display.do" />	
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/dashboard/administrator/display.do" />	
+
+			
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/contest/administrator/list.do" />
+		
+		<security:intercept-url access="hasRole('ADMIN')"
+			pattern="/actor/administrator/list.do" />
+	
+		<security:intercept-url pattern="/**" access="hasRole('NONE')" />
+
+		<security:form-login 
+			login-page="/security/login.do"
+			password-parameter="password" 
+			username-parameter="username"
+			authentication-failure-url="/security/loginFailure.do" />
+
+		<security:logout 
+			logout-success-url="/" 
+			invalidate-session="true" />
+	</security:http>
+
+</beans>
